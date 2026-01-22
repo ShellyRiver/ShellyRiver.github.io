@@ -62,19 +62,13 @@
       width: 76px;
       height: 76px;
       border-radius: 20px;
-      background: linear-gradient(135deg, rgba(139,211,255,.55), rgba(195,166,255,.55));
+      /* Removed background gradient */
       border: 1px solid var(--border);
       flex: 0 0 auto;
       position:relative;
       overflow:hidden;
     }
-    .avatar::after{
-      content:"";
-      position:absolute;
-      inset:-40%;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 55%);
-      transform: rotate(15deg);
-    }
+    /* Removed ::after pseudo-element */
 
     h1{
       margin:0;
