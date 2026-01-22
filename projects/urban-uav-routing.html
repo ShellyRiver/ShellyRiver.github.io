@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shilan He | Adaptive Inter-UAV Network Routing</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="id">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <h1>Shilan He</h1>
+          <div class="subtitle">
+            Ph.D. Candidate (Computer Engineering) @ UIUC · UAV Networking · Autonomous Systems · Distributed/Cloud Systems<br/>
+            I build occlusion-aware routing, multi-agent learning systems, and optimization-based planners.
+          </div>
+        </div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="../index.html">Back to Home</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="sectionTitle">
+        <h2>Adaptive Inter-UAV Network Routing for Urban Environments</h2>
+      </div>
+
+      <div class="grid">
+        <section class="cardWrap" style="grid-column: span 12;">
+          <div class="card" style="transform: none;">
+            <div class="face front" style="position: relative; backface-visibility: visible;">
+              <div class="kicker">
+                <span>Research / Networking</span>
+                <span class="pill">Routing stability</span>
+              </div>
+              <h3 class="projTitle">Occlusion-Aware, Predictive Routing</h3>
+              <p class="desc">
+                Designed an occlusion-aware, predictive routing metric integrated into OLSR to maintain stable paths under
+                high mobility and building blockages. It uses UAV GPS and city map geometry to estimate probabilistic Line-of-Sight (LoS)
+                and bias an ETX-like link quality metric toward stable links. This reduces route flapping during topology changes
+                in obstructed urban environments.
+              </p>
+              <div class="metrics">
+                <span class="metric">Outage Reduction: &gt;40% → 5.6%</span>
+                <span class="metric">LoS Prediction Horizon: 0.5s</span>
+                <span class="metric">Platform: ns-3 Simulation</span>
+              </div>
+              <div class="tech">
+                <span class="tag">C++</span><span class="tag">ns-3</span><span class="tag">OLSR</span>
+                <span class="tag">Geometric LoS checks</span><span class="tag">Routing metrics</span>
+              </div>
+              <div class="links">
+                <a class="btn" href="#" target="_blank" rel="noreferrer">Code</a>
+                <a class="btn" href="#" target="_blank" rel="noreferrer">Paper / Preprint</a>
+                <a class="btn" href="#" target="_blank" rel="noreferrer">Slides</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Shilan He · Built with GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

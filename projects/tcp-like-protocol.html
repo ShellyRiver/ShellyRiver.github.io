@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shilan He | TCP-like Protocol</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="id">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <h1>Shilan He</h1>
+          <div class="subtitle">
+            Ph.D. Candidate (Computer Engineering) @ UIUC · UAV Networking · Autonomous Systems · Distributed/Cloud Systems<br/>
+            I build occlusion-aware routing, multi-agent learning systems, and optimization-based planners.
+          </div>
+        </div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="../index.html">Back to Home</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="sectionTitle">
+        <h2>TCP-like Reliable Transport Protocol over UDP</h2>
+      </div>
+
+      <div class="grid">
+        <section class="cardWrap" style="grid-column: span 12;">
+          <div class="card" style="transform: none;">
+            <div class="face front" style="position: relative; backface-visibility: visible;">
+              <div class="kicker">
+                <span>Systems / Networking</span>
+                <span class="pill">Transport</span>
+              </div>
+              <h3 class="projTitle">Reliable, Congestion-Aware Transport</h3>
+              <p class="desc">
+                Built a reliable, congestion-aware transport protocol over UDP with features for loss recovery, ordering,
+                and fairness under contention. Implemented sender/receiver logic with sequence numbers, ACKs,
+                retransmissions, buffers, and congestion control. Evaluated using Linux `tc` emulation for loss, delay, and bandwidth.
+              </p>
+              <div class="metrics">
+                <span class="metric">In-order transfer under loss</span>
+                <span class="metric">Fairness ±10%</span>
+              </div>
+              <div class="tech">
+                <span class="tag">C</span><span class="tag">Linux sockets</span><span class="tag">UDP</span>
+                <span class="tag">Congestion control</span><span class="tag">Traffic control (tc)</span>
+              </div>
+              <div class="links">
+                <a class="btn" href="#" target="_blank" rel="noreferrer">Code</a>
+                <a class="btn" href="#" target="_blank" rel="noreferrer">Write-up</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Shilan He · Built with GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

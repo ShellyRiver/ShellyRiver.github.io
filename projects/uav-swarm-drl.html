@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shilan He | UAV Swarm Deployment with DRL</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="id">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <h1>Shilan He</h1>
+          <div class="subtitle">
+            Ph.D. Candidate (Computer Engineering) @ UIUC · UAV Networking · Autonomous Systems · Distributed/Cloud Systems<br/>
+            I build occlusion-aware routing, multi-agent learning systems, and optimization-based planners.
+          </div>
+        </div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="../index.html">Back to Home</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="sectionTitle">
+        <h2>UAV Swarm Deployment with Multi-Agent DRL (PPO)</h2>
+      </div>
+
+      <div class="grid">
+        <section class="cardWrap" style="grid-column: span 12;">
+          <div class="card" style="transform: none;">
+            <div class="face front" style="position: relative; backface-visibility: visible;">
+              <div class="kicker">
+                <span>ML Systems / Multi-agent</span>
+                <span class="pill">Coverage</span>
+              </div>
+              <h3 class="projTitle">Obstacle-Aware Multi-Agent Policy</h3>
+              <p class="desc">
+                Built an obstacle-aware multi-agent policy for dynamic UAV repositioning to maximize ground-user coverage
+                while minimizing travel cost. The system uses a centralized training, decentralized execution model. It encodes obstacle
+                elevation, user distribution, and "staleness" maps via a CNN, and uses attention-based neighbor aggregation for coordination
+                without explicit role assignment.
+              </p>
+              <div class="metrics">
+                <span class="metric">&gt;2× coverage vs baselines</span>
+                <span class="metric">Centralized train / decentralized exec</span>
+              </div>
+              <div class="tech">
+                <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">PPO</span>
+                <span class="tag">PettingZoo</span><span class="tag">Attention</span><span class="tag">CNN encoders</span>
+              </div>
+              <div class="links">
+                <a class="btn" href="#" target="_blank" rel="noreferrer">Code</a>
+                <a class="btn" href="#" target="_blank" rel="noreferrer">Report</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Shilan He · Built with GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shilan He | Federated Learning Platform</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="id">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <h1>Shilan He</h1>
+          <div class="subtitle">
+            Ph.D. Candidate (Computer Engineering) @ UIUC · UAV Networking · Autonomous Systems · Distributed/Cloud Systems<br/>
+            I build occlusion-aware routing, multi-agent learning systems, and optimization-based planners.
+          </div>
+        </div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="../index.html">Back to Home</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="sectionTitle">
+        <h2>Cross-Silo Federated Learning Platform (Features + Monitoring)</h2>
+      </div>
+
+      <div class="grid">
+        <section class="cardWrap" style="grid-column: span 12;">
+          <div class="card" style="transform: none;">
+            <div class="face front" style="position: relative; backface-visibility: visible;">
+              <div class="kicker">
+                <span>Cloud / Distributed ML</span>
+                <span class="pill">Platform</span>
+              </div>
+              <h3 class="projTitle">Usability and Observability Features</h3>
+              <p class="desc">
+                Built usability and observability features for a Federated Learning (FL) platform, including support for uploads,
+                dashboards, experiment reports, and secure orchestration. Implemented GitHub/HuggingFace uploads, custom loss support,
+                automated client updates, and resource monitoring dashboards (CPU/GPU/memory/network) with experiment comparison reporting.
+              </p>
+              <div class="metrics">
+                <span class="metric">Globus Auth + Compute</span>
+                <span class="metric">AWS orchestration</span>
+              </div>
+              <div class="tech">
+                <span class="tag">Python</span><span class="tag">AWS (ECS/Fargate, S3, DynamoDB, CloudWatch)</span>
+                <span class="tag">Globus Auth</span><span class="tag">Globus Compute</span>
+                <span class="tag">Monitoring dashboards</span>
+              </div>
+              <div class="links">
+                <a class="btn" href="#" target="_blank" rel="noreferrer">Docs</a>
+                <a class="btn" href="#" target="_blank" rel="noreferrer">Paper</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Shilan He · Built with GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -5,317 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Shilan He | Portfolio</title>
   <meta name="description" content="Shilan He — Robotics / Networking / Systems. Research + projects portfolio." />
-
-  <style>
-    :root{
-      --bg: #0b1220;
-      --panel: rgba(255,255,255,0.06);
-      --panel2: rgba(255,255,255,0.10);
-      --text: rgba(255,255,255,0.90);
-      --muted: rgba(255,255,255,0.70);
-      --faint: rgba(255,255,255,0.45);
-      --border: rgba(255,255,255,0.14);
-      --accent: #8bd3ff;
-      --accent2:#c3a6ff;
-      --shadow: 0 18px 50px rgba(0,0,0,.45);
-      --radius: 18px;
-      --max: 1080px;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: var(--sans);
-      color: var(--text);
-      background:
-        radial-gradient(1200px 600px at 10% 0%, rgba(139,211,255,.20), transparent 60%),
-        radial-gradient(900px 500px at 90% 10%, rgba(195,166,255,.20), transparent 55%),
-        radial-gradient(900px 700px at 60% 100%, rgba(139,211,255,.10), transparent 55%),
-        linear-gradient(180deg, #070b14, var(--bg));
-    }
-
-    a{color:inherit; text-decoration:none}
-    a:hover{opacity:.95}
-
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 34px 18px 60px;
-    }
-
-    header{
-      display:flex;
-      gap:18px;
-      align-items:flex-start;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      padding: 22px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-    }
-
-    .id{
-      display:flex;
-      gap:16px;
-      align-items:flex-start;
-      min-width:min(680px, 100%);
-    }
-
-    .avatar{
-      width: 76px;
-      height: 76px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, rgba(139,211,255,.55), rgba(195,166,255,.55));
-      border: 1px solid var(--border);
-      flex: 0 0 auto;
-      position:relative;
-      overflow:hidden;
-    }
-    .avatar::after{
-      content:"";
-      position:absolute;
-      inset:-40%;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 55%);
-      transform: rotate(15deg);
-    }
-
-    h1{
-      margin:0;
-      font-size: 26px;
-      line-height:1.15;
-      letter-spacing: .2px;
-    }
-    .subtitle{
-      margin-top:6px;
-      color: var(--muted);
-      font-size: 14.5px;
-      line-height:1.4;
-    }
-
-    .chips{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin-top:12px;
-    }
-    .chip{
-      font-size: 12px;
-      color: rgba(255,255,255,0.84);
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.06);
-      padding: 6px 10px;
-      border-radius: 999px;
-      display:inline-flex;
-      gap:8px;
-      align-items:center;
-    }
-    .chip b{font-family:var(--mono); font-weight:600; color:rgba(255,255,255,.92)}
-    .chip .dot{
-      width:6px;height:6px;border-radius:99px;background:var(--accent);
-      box-shadow: 0 0 18px rgba(139,211,255,.75);
-    }
-
-    .cta{
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      align-items:flex-end;
-    }
-    .btnrow{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
-    .btn{
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.06);
-      padding: 10px 12px;
-      border-radius: 12px;
-      font-size: 13px;
-      color: rgba(255,255,255,.88);
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
-      cursor:pointer;
-      user-select:none;
-    }
-    .btn:hover{
-      transform: translateY(-1px);
-      background: rgba(255,255,255,.09);
-      border-color: rgba(255,255,255,.22);
-    }
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(139,211,255,.22), rgba(195,166,255,.18));
-      border-color: rgba(139,211,255,.35);
-    }
-    .btn small{color:var(--faint)}
-
-    main{margin-top:22px}
-
-    .sectionTitle{
-      display:flex;
-      align-items:baseline;
-      justify-content:space-between;
-      gap:12px;
-      margin: 26px 4px 12px;
-    }
-    .sectionTitle h2{
-      margin:0;
-      font-size: 16px;
-      letter-spacing:.3px;
-      color: rgba(255,255,255,.90);
-    }
-    .sectionTitle .hint{
-      color: var(--faint);
-      font-size: 12.5px;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 14px;
-    }
-
-    /* Flip cards */
-    .cardWrap{
-      grid-column: span 6;
-      perspective: 1200px;
-      min-height: 235px;
-    }
-    @media (max-width: 900px){
-      .cardWrap{grid-column: span 12;}
-    }
-
-    .card{
-      width:100%;
-      height:100%;
-      position:relative;
-      transform-style: preserve-3d;
-      transition: transform .55s cubic-bezier(.2,.8,.2,1);
-      border-radius: var(--radius);
-    }
-    .cardWrap:hover .card,
-    .cardWrap:focus-within .card{
-      transform: rotateY(180deg);
-    }
-
-    .face{
-      position:absolute;
-      inset:0;
-      backface-visibility:hidden;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
-      box-shadow: var(--shadow);
-      padding: 16px 16px 14px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      overflow:hidden;
-    }
-    .face::before{
-      content:"";
-      position:absolute;
-      inset:-30%;
-      background: radial-gradient(circle at 20% 10%, rgba(139,211,255,.12), transparent 55%),
-                  radial-gradient(circle at 80% 0%, rgba(195,166,255,.10), transparent 55%);
-      transform: rotate(10deg);
-      pointer-events:none;
-    }
-    .front{transform: rotateY(0deg)}
-    .back{transform: rotateY(180deg)}
-
-    .kicker{
-      position:relative;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      color: var(--faint);
-      font-size: 12px;
-    }
-    .pill{
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.06);
-      padding: 4px 8px;
-      border-radius: 999px;
-      color: rgba(255,255,255,.78);
-      font-size: 12px;
-      white-space:nowrap;
-    }
-
-    .projTitle{
-      position:relative;
-      margin:0;
-      font-size: 15.5px;
-      letter-spacing:.2px;
-      line-height:1.25;
-    }
-    .desc{
-      position:relative;
-      margin:0;
-      color: var(--muted);
-      font-size: 13.5px;
-      line-height:1.5;
-    }
-
-    .metrics{
-      position:relative;
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin-top:auto;
-    }
-    .metric{
-      font-family: var(--mono);
-      font-size: 12px;
-      border: 1px solid var(--border);
-      background: rgba(0,0,0,.12);
-      padding: 6px 8px;
-      border-radius: 12px;
-      color: rgba(255,255,255,.85);
-    }
-
-    .tech{
-      position:relative;
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-    }
-    .tag{
-      font-size: 12px;
-      color: rgba(255,255,255,0.82);
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.06);
-      padding: 6px 10px;
-      border-radius: 999px;
-    }
-
-    .links{
-      position:relative;
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top: 6px;
-    }
-
-    footer{
-      margin-top: 28px;
-      color: var(--faint);
-      font-size: 12.5px;
-      padding: 18px 4px 0;
-    }
-
-    /* Accessibility: reduce motion */
-    @media (prefers-reduced-motion: reduce){
-      .card{transition:none}
-      .cardWrap:hover .card,
-      .cardWrap:focus-within .card{transform:none}
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -354,234 +44,107 @@
             Google Scholar
           </a>
         </div>
-        <div class="hint" style="color:var(--faint); font-size:12.5px;">
-          Tip: hover a project card to flip. Keyboard: Tab into a card and it flips on focus.
-        </div>
       </div>
     </header>
 
     <main>
       <div class="sectionTitle">
         <h2>Selected Projects</h2>
-        <div class="hint">Front = overview · Back = details + tech stack</div>
       </div>
 
       <div class="grid">
 
         <!-- 1) Occlusion-aware UAV routing -->
-        <section class="cardWrap" tabindex="0" aria-label="Adaptive Inter-UAV Network Routing for Urban Environments">
+        <div class="cardWrap">
           <div class="card">
             <div class="face front">
-              <div class="kicker">
-                <span>Research / Networking</span>
-                <span class="pill">Routing stability</span>
-              </div>
               <h3 class="projTitle">Adaptive Inter-UAV Network Routing for Urban Environments</h3>
               <p class="desc">
-                Designed an occlusion-aware, predictive routing metric integrated into OLSR to maintain stable paths under
-                high mobility and building blockages.
+                  Designed an occlusion-aware, predictive routing metric integrated into OLSR to maintain stable paths under
+                  high mobility and building blockages.
               </p>
-              <div class="metrics">
-                <span class="metric">Outage: &gt;40% → 5.6%</span>
-                <span class="metric">LoS prediction: 0.5s horizon</span>
-                <span class="metric">ns-3 integration</span>
-              </div>
             </div>
             <div class="face back">
-              <div class="kicker">
-                <span>What I built</span>
-                <span class="pill">Flip for tech</span>
-              </div>
-              <p class="desc">
-                Uses UAV GPS + city map geometry to estimate probabilistic LoS and bias ETX-like link quality toward stable links,
-                reducing route flapping in obstructed urban topology changes.
-              </p>
-              <div class="tech">
-                <span class="tag">C++</span><span class="tag">ns-3</span><span class="tag">OLSR</span>
-                <span class="tag">Geometric LoS checks</span><span class="tag">Routing metrics</span>
-              </div>
-              <div class="links">
-                <!-- Replace with real URLs -->
-                <a class="btn" href="#" target="_blank" rel="noreferrer">Code</a>
-                <a class="btn" href="#" target="_blank" rel="noreferrer">Paper / Preprint</a>
-                <a class="btn" href="#" target="_blank" rel="noreferrer">Slides</a>
-              </div>
+              <p>Back of the card</p>
             </div>
           </div>
-        </section>
+        </div>
 
         <!-- 2) Multi-agent DRL coverage -->
-        <section class="cardWrap" tabindex="0" aria-label="UAV Swarm Deployment Using Deep Reinforcement Learning for Node Coverage">
+        <div class="cardWrap">
           <div class="card">
             <div class="face front">
-              <div class="kicker">
-                <span>ML Systems / Multi-agent</span>
-                <span class="pill">Coverage</span>
-              </div>
               <h3 class="projTitle">UAV Swarm Deployment with Multi-Agent DRL (PPO)</h3>
               <p class="desc">
-                Built an obstacle-aware multi-agent policy for dynamic UAV repositioning to maximize ground-user coverage
-                while minimizing travel cost.
+                  Built an obstacle-aware multi-agent policy for dynamic UAV repositioning to maximize ground-user coverage
+                  while minimizing travel cost.
               </p>
-              <div class="metrics">
-                <span class="metric">&gt;2× coverage vs baselines</span>
-                <span class="metric">Centralized train / decentralized exec</span>
-              </div>
             </div>
             <div class="face back">
-              <p class="desc">
-                Encoded obstacle elevation + user distribution + “staleness” maps via CNN, plus attention-based neighbor aggregation
-                for coordination without explicit role assignment.
-              </p>
-              <div class="tech">
-                <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">PPO</span>
-                <span class="tag">PettingZoo</span><span class="tag">Attention</span><span class="tag">CNN encoders</span>
-              </div>
-              <div class="links">
-                <a class="btn" href="#" target="_blank" rel="noreferrer">Code</a>
-                <a class="btn" href="#" target="_blank" rel="noreferrer">Report</a>
-              </div>
+              <p>Back of the card</p>
             </div>
           </div>
-        </section>
+        </div>
 
         <!-- 3) Trajectory optimization -->
-        <section class="cardWrap" tabindex="0" aria-label="Trajectory Optimization for Autonomous Racing">
+        <div class="cardWrap">
           <div class="card">
             <div class="face front">
-              <div class="kicker">
-                <span>Robotics / Optimization</span>
-                <span class="pill">Planning</span>
-              </div>
               <h3 class="projTitle">Trajectory Optimization for Autonomous Racing (Slalom)</h3>
               <p class="desc">
-                Nonlinear, constrained trajectory optimization over position/heading/curvature/speed with online replanning and stitching.
+                  Nonlinear, constrained trajectory optimization over position/heading/curvature/speed with online replanning and stitching.
               </p>
-              <div class="metrics">
-                <span class="metric">Soft waypoint constraints</span>
-                <span class="metric">Velocity as variable</span>
-                <span class="metric">ROS integration</span>
-              </div>
             </div>
             <div class="face back">
-              <p class="desc">
-                Implemented Newton-type optimization with multi-term costs (curvature, speed smoothness, terminal accuracy),
-                then enforced physical limits via velocity profiling (accel, lateral accel, steering rate).
-              </p>
-              <div class="tech">
-                <span class="tag">Python</span><span class="tag">SciPy</span><span class="tag">Nonlinear optimization</span>
-                <span class="tag">Vehicle kinematics</span><span class="tag">ROS</span>
-              </div>
-              <div class="links">
-                <a class="btn" href="#" target="_blank" rel="noreferrer">Code</a>
-                <a class="btn" href="#" target="_blank" rel="noreferrer">Demo</a>
-              </div>
+              <p>Back of the card</p>
             </div>
           </div>
-        </section>
+        </div>
 
         <!-- 4) TCP-like protocol -->
-        <section class="cardWrap" tabindex="0" aria-label="TCP-like Reliable Transport Protocol over UDP">
+        <div class="cardWrap">
           <div class="card">
             <div class="face front">
-              <div class="kicker">
-                <span>Systems / Networking</span>
-                <span class="pill">Transport</span>
-              </div>
               <h3 class="projTitle">TCP-like Reliable Transport Protocol over UDP</h3>
               <p class="desc">
-                Built a reliable, congestion-aware transport over UDP with loss recovery, ordering, and fairness under contention.
+                  Built a reliable, congestion-aware transport over UDP with loss recovery, ordering, and fairness under contention.
               </p>
-              <div class="metrics">
-                <span class="metric">In-order transfer under loss</span>
-                <span class="metric">Fairness ±10%</span>
-              </div>
             </div>
             <div class="face back">
-              <p class="desc">
-                Implemented sender/receiver logic with sequence numbers, ACKs, retransmissions, buffers, and congestion control.
-                Evaluated using Linux <span style="font-family:var(--mono);">tc</span> emulation (loss/delay/bw).
-              </p>
-              <div class="tech">
-                <span class="tag">C</span><span class="tag">Linux sockets</span><span class="tag">UDP</span>
-                <span class="tag">Congestion control</span><span class="tag">Traffic control (tc)</span>
-              </div>
-              <div class="links">
-                <a class="btn" href="#" target="_blank" rel="noreferrer">Code</a>
-                <a class="btn" href="#" target="_blank" rel="noreferrer">Write-up</a>
-              </div>
+              <p>Back of the card</p>
             </div>
           </div>
-        </section>
+        </div>
 
         <!-- 5) Pet localization -->
-        <section class="cardWrap" tabindex="0" aria-label="Room-Scale Pet Localization System">
+        <div class="cardWrap">
           <div class="card">
             <div class="face front">
-              <div class="kicker">
-                <span>IoT / Edge + Web</span>
-                <span class="pill">Localization</span>
-              </div>
               <h3 class="projTitle">Room-Scale Pet Localization (BLE + HMM)</h3>
               <p class="desc">
-                Real-time room-level localization using BLE RSSI via ESP32 receivers + Raspberry Pi backend and a lightweight web dashboard.
+                  Real-time room-level localization using BLE RSSI via ESP32 receivers + Raspberry Pi backend and a lightweight web dashboard.
               </p>
-              <div class="metrics">
-                <span class="metric">Accuracy: 87.7% → 90.9%</span>
-                <span class="metric">HMM temporal smoothing</span>
-              </div>
             </div>
             <div class="face back">
-              <p class="desc">
-                Staggered receiver reporting to reduce Wi-Fi contention; RSSI averaging + HMM forward inference for robust room prediction.
-                Web UI shows live location and time distribution.
-              </p>
-              <div class="tech">
-                <span class="tag">ESP32</span><span class="tag">Arduino C/C++</span><span class="tag">Raspberry Pi</span>
-                <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">HTML/CSS/JS</span>
-              </div>
-              <div class="links">
-                <a class="btn" href="#" target="_blank" rel="noreferrer">Code</a>
-                <a class="btn" href="#" target="_blank" rel="noreferrer">Demo</a>
-              </div>
+              <p>Back of the card</p>
             </div>
           </div>
-        </section>
+        </div>
 
         <!-- 6) Federated learning platform -->
-        <section class="cardWrap" tabindex="0" aria-label="Federated Learning Platform Features and Monitoring">
+        <div class="cardWrap">
           <div class="card">
             <div class="face front">
-              <div class="kicker">
-                <span>Cloud / Distributed ML</span>
-                <span class="pill">Platform</span>
-              </div>
               <h3 class="projTitle">Cross-Silo Federated Learning Platform (Features + Monitoring)</h3>
               <p class="desc">
-                Built usability and observability features for an FL platform: uploads, dashboards, experiment reports, and secure orchestration.
+                  Built usability and observability features for an FL platform: uploads, dashboards, experiment reports, and secure orchestration.
               </p>
-              <div class="metrics">
-                <span class="metric">Globus Auth + Compute</span>
-                <span class="metric">AWS orchestration</span>
-              </div>
             </div>
             <div class="face back">
-              <p class="desc">
-                Implemented GitHub/HuggingFace uploads, custom loss support, automated client updates,
-                and resource monitoring dashboards (CPU/GPU/mem/network) with experiment comparison reporting.
-              </p>
-              <div class="tech">
-                <span class="tag">Python</span><span class="tag">AWS (ECS/Fargate, S3, DynamoDB, CloudWatch)</span>
-                <span class="tag">Globus Auth</span><span class="tag">Globus Compute</span>
-                <span class="tag">Monitoring dashboards</span>
-              </div>
-              <div class="links">
-                <a class="btn" href="#" target="_blank" rel="noreferrer">Docs</a>
-                <a class="btn" href="#" target="_blank" rel="noreferrer">Paper</a>
-              </div>
+              <p>Back of the card</p>
             </div>
           </div>
-        </section>
+        </div>
 
       </div>
 
@@ -599,14 +162,20 @@
       </div>
 
       <footer>
-        © <span id="y"></span> Shilan He · Built with GitHub Pages ·
-        <span style="font-family:var(--mono);">hover</span> to flip project cards
+        © <span id="y"></span> Shilan He · Built with GitHub Pages
       </footer>
     </main>
   </div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/populate-projects.js"></script>
+
+  <div id="project-details-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <div id="modal-project-content"></div>
+    </div>
+  </div>
 </body>
 </html>
